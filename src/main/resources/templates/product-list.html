@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>DDSHOP</title>
+<!-- Bootstrap core CSS-->
+<link href="/js/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom fonts for this template-->
+<link href="/js/vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<!-- Page level plugin CSS-->
+<link href="/js/vendor/datatables/dataTables.bootstrap4.css"
+	rel="stylesheet">
+<!-- Custom styles for this template-->
+<link href="/styles/sb-admin.css" rel="stylesheet">
+</head>
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+		id="mainNav">
+		<a class="navbar-brand" href="index.html">D&D Shop Management</a>
+		<button class="navbar-toggler navbar-toggler-right" type="button"
+			data-toggle="collapse" data-target="#navbarResponsive"
+			aria-controls="navbarResponsive" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+				<li class="nav-item" data-toggle="tooltip" data-placement="right"
+					title="Dashboard"><a class="nav-link" href="index.html"> <i
+						class="fa fa-fw fa-dashboard"></i> <span class="nav-link-text">Quản
+							Lý Sản Phẩm</span>
+				</a></li>
+				<li class="nav-item" data-toggle="tooltip" data-placement="right"
+					title="Charts"><a class="nav-link" href="charts.html"> <i
+						class="fa fa-fw fa-area-chart"></i> <span class="nav-link-text">Thùng
+							Rác</span>
+				</a></li>
+			</ul>
+			<ul class="navbar-nav sidenav-toggler">
+				<li class="nav-item"><a class="nav-link text-center"
+					id="sidenavToggler"> <i class="fa fa-fw fa-angle-left"></i>
+				</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="content-wrapper">
+		<div class="container-fluid">
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link active" id="vestTab"
+					href="#vest">Vest</a></li>
+				<li class="nav-item"><a class="nav-link" id="somiTab"
+					href="#somi">Sơ mi</a></li>
+				<li class="nav-item"><a class="nav-link" id="quanTab"
+					href="#quantay">Quần tây</a></li>
+				<li class="nav-item"><a class="nav-link" id="giayTab"
+					href="#giay">Giày</a></li>
+				<li class="nav-item"><a class="nav-link" id="phukienTab"
+					href="#others">Phụ kiện</a></li>
+			</ul>
+			<br> <a href="" data-toggle="modal" data-target="#add-modal"
+				class="btn btn-primary">Thêm sản phẩm</a> <br />
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div id="vest" class="tab-pane active">
+					<br>
+					<h3 style="color: #3366cc">Danh sách Vest</h3>
+					<div class="table-responsive">
+						<table class="table table-bordered table-hover"
+							style="width: 100%" id="vestTable">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Mã</th>
+									<th>Tên</th>
+									<th>Giá</th>
+									<th>Size</th>
+									<th>Giảm giá</th>
+									<th>Ngày tạo</th>
+									<th>Mô tả</th>
+									<th>Loại</th>
+									<th>Hành động</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+				<div id="somi" class="tab-pane fade">
+					<br>
+					<h3 style="color: #3366cc">Danh sách Sơ mi</h3>
+					<div class="table-responsive">
+						<table class="table table-bordered table-hover"
+							style="width: 100%" id="somiTable">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Mã</th>
+									<th>Tên</th>
+									<th>Giá</th>
+									<th>Size</th>
+									<th>Giảm giá</th>
+									<th>Ngày tạo</th>
+									<th>Mô tả</th>
+									<th>Loại</th>
+									<th>Hành động</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+				<div id="quantay" class="tab-pane fade">
+					<br>
+					<h3 style="color: #3366cc">Danh sách Quần</h3>
+					<div class="table-responsive">
+						<table class="table table-bordered table-hover"
+							style="width: 100%" id="quanTable">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Mã</th>
+									<th>Tên</th>
+									<th>Giá</th>
+									<th>Size</th>
+									<th>Giảm giá</th>
+									<th>Ngày tạo</th>
+									<th>Mô tả</th>
+									<th>Loại</th>
+									<th>Hành động</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+				<div id="giay" class="tab-pane fade">
+					<br>
+					<h3 style="color: #3366cc">Danh sách Giày</h3>
+					<div class="table-responsive">
+						<table class="table table-bordered table-hover"
+							style="width: 100%" id="giayTable">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Mã</th>
+									<th>Tên</th>
+									<th>Giá</th>
+									<th>Size</th>
+									<th>Giảm giá</th>
+									<th>Ngày tạo</th>
+									<th>Mô tả</th>
+									<th>Loại</th>
+									<th>Hành động</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+				<div id="others" class="tab-pane fade">
+					<br>
+					<h3 style="color: #3366cc">Danh sách Phụ kiện</h3>
+					<div class="table-responsive">
+						<table class="table table-bordered table-hover"
+							style="width: 100%" id="otherTable">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Mã</th>
+									<th>Tên</th>
+									<th>Giá</th>
+									<th>Size</th>
+									<th>Giảm giá</th>
+									<th>Ngày tạo</th>
+									<th>Mô tả</th>
+									<th>Loại</th>
+									<th>Hành động</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- /.container-fluid-->
+		<!-- /.content-wrapper-->
+		<footer class="sticky-footer">
+			<div class="container">
+				<div class="text-center">
+					<small>Make by HieuNC©Website 2018</small>
+				</div>
+			</div>
+		</footer>
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded" href="#page-top"> <i
+			class="fa fa-angle-up"></i>
+		</a>
+	</div>
+
+	<div id="delete-modal" class="modal fade" role="dialog"
+		data-backdrop="false">
+		<div class="modal-dialog modal-dialog-centered">
+			<form id="delete-form" method="POST" class="form-horizontal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<b class="modal-title" style="color: red">Xóa sản phẩm ra khỏi
+							danh sách</b>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<p>Sản phẩm này sẽ bị loại khỏi danh sách bán hàng.</p>
+						<p>
+							Để khôi phục lại sản phẩm hoặc xóa hẳn sản phẩm khỏi cửa hàng.
+							Hãy vào mục <strong>Thùng Rác</strong>
+						</p>
+						<input type="hidden" id="delete-form-productID">
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Xác Nhận</button>
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Hủy Bỏ</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="add-modal" class="modal fade" role="dialog"
+		data-backdrop="false">
+		<div class="modal-dialog modal-lg">
+			<form id="add-form" enctype="multipart/form-data">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" style="color: blue">Thêm Sản Phẩm Mới</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<div class="modal-body">
+						<div class="form-row">
+							<div class="form-group col-md-4">
+								<label class="control-label">Mã Sản Phẩm:</label> <input
+									class="form-control" id="add-form-code"
+									placeholder="Nhập Mã Sản Phẩm" required maxlength="50" />
+							</div>
+							<div class="form-group col-md-8">
+								<label class="control-label">Tên Sản Phẩm:</label> <input
+									class="form-control" id="add-form-name"
+									placeholder="Nhập Tên Sản Phẩm" required maxlength="500" />
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-4">
+								<label class="control-label">Giá:</label>
+								<div class="flex">
+									<input class="form-control" id="add-form-price"
+										placeholder="Nhập Giá" required maxlength="15" type="text" />
+									<span class="currency">VNĐ</span>
+								</div>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label class="control-label">Loại Sản Phẩm: </label> <select
+									class="form-control" id="add-form-categoryID">
+									<option value="1">Vest</option>
+									<option value="2">Sơ mi</option>
+									<option value="3">Quần</option>
+									<option value="4">Giày</option>
+									<option value="5">Phụ kiện</option>
+								</select>
+							</div>
+
+						</div>
+						<div class="form-group">
+							<label class="control-label">Size:</label> <input
+								class="form-control" id="add-form-size" placeholder="Nhập Size"
+								maxlength="100" type="text" />
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Mô Tả Sản Phẩm:</label>
+							<textarea class="form-control" id="add-form-description" rows="5"></textarea>
+
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="submit" id="save" class="btn btn-success">Lưu</button>
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Hủy Bỏ</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="update-modal" class="modal fade" role="dialog"
+		data-backdrop="false">
+		<div class="modal-dialog  modal-lg">
+			<form id="update-form">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" style="color: blue">Sửa Sản Phẩm</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+					</div>
+					<div class="modal-body">
+						<div class="form-row">
+							<input class="form-control" id="update-form-id" type="hidden" />
+							<div class="form-group col-md-4" type="hidden">
+								<label class="control-label">Mã Sản Phâm:</label> <input
+									class="form-control" id="update-form-code"
+									placeholder="Nhập Mã Sản Phẩm" required maxlength="50" />
+							</div>
+							<div class="form-group col-md-8">
+								<label class="control-label">Tên Sản Phẩm:</label> <input
+									class="form-control" id="update-form-name"
+									placeholder="Nhập Tên Sản Phẩm" required maxlength="500" />
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-4">
+								<label class="control-label">Gía:</label>
+								<div class="flex">
+									<input class="form-control" id="update-form-price"
+										placeholder="Nhập Giá" required maxlength="15" type="text" />
+									<span class="currency">VNĐ</span>
+								</div>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label class="control-label">Loại Sản Phẩm:</label> <select
+									class="form-control" id="update-form-categoryID">
+									<option value="1">Vest</option>
+									<option value="2">Sơ mi</option>
+									<option value="3">Quần</option>
+									<option value="4">Giày</option>
+									<option value="5">Phụ kiện</option>
+								</select>
+							</div>
+
+						</div>
+						<div class="form-group">
+							<label class="control-label">Size:</label> <input
+								class="form-control" id="update-form-size"
+								placeholder="Nhập Size" maxlength="100" type="text" />
+						</div>
+
+						<div class="form-group">
+							<label class="control-label">Mô Tả Sản Phẩm:</label>
+							<textarea class="form-control" id="update-form-description"
+								rows="5"></textarea>
+
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="submit" id="save" class="btn btn-success">Lưu</button>
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Hủy Bỏ</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="upload-modal" class="modal fade" role="dialog"
+		data-backdrop="false">
+		<div class="modal-dialog  modal-lg">
+			<form id="upload-form" method="POST" enctype="multipart/form-data">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" style="color: blue">Upload Hình Ảnh</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label class="control-label">Chọn Hình Ảnh </label> <br> <input
+								type="file" name="file" onchange="previewFile()" id="update-form-photo"><br>
+							<br> <img src="" height="200" alt="Image preview...">
+						</div>
+					</div>
+					<input type="hidden" id="upload-form-productID">
+					<div class="modal-footer">
+						<button type="submit" id="save" class="btn btn-success">Upload</button>
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">Hủy Bỏ</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="/js/vendor/jquery/jquery.min.js"></script>
+	<script src="/js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Core plugin JavaScript-->
+	<script src="/js/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<!-- Page level plugin JavaScript-->
+	<script src="/js/vendor/datatables/jquery.dataTables.js"></script>
+	<script src="/js/vendor/datatables/dataTables.bootstrap4.js"></script>
+	<!-- Custom scripts for all pages-->
+	<script src="/js/sb-admin.min.js"></script>
+	<!-- Custom scripts for this page-->
+	<script src="/js/sb-admin-datatables.min.js"></script>
+	<script src="/js/ddshop.js"></script>
+</body>
+</html>

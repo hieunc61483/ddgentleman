@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>D&D Shop</title>
+</head>
+<body>
+  <a th:href="@{product/product-list}">List Customer</a><br />
+  <h1>Add new Customer:</h1>
+  <form th:action="@{saveProduct}" method="POST" th:object="${product}">
+      Mã sản phẩm: <input th:field="*{productCode}"/> <br/> <br/>
+      Tên sản phẩm: <input th:field="*{productName}"/> <br/> <br/>
+      Giá: <input th:field="*{price}"/> <br/> <br/>
+      Mô tả: <input th:field="*{description}"/> <br/> <br/>
+      Category: <input th:field="*{categoryID}"/> <br/> <br/>
+      Size: <input th:field="*{listSize}"/> <br/> <br/>
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>

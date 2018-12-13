@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>D&D Shop</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="D&D Shop">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+	<div th:insert="menu :: menu"></div>
+	<!-- Slider -->
+	
+	<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="main_slider carousel-item active" style="background-image:url(images/Slider-2.jpg)">
+		<div class="container fill_height">
+			<div class="row align-items-center fill_height">
+				<div class="col">
+					<div class="main_slider_content">
+						<h6 style="color: white">Being a true gentleman never goes out of style</h6>
+						<h1 style="color: white">Trở thành quý ông lịch lãm tại D&D</h1>
+						<div class="red_button shop_now_button"><a href="#">Liên Hệ</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="main_slider carousel-item" style="background-image:url(images/Slider-3.jpg)">
+		<div class="container fill_height">
+			<div class="row align-items-center fill_height">
+				<div class="col">
+					<div class="main_slider_content">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="main_slider carousel-item" style="background-image:url(images/Slider-4.jpg)">
+		<div class="container fill_height">
+			<div class="row align-items-center fill_height">
+				<div class="col">
+					<div class="main_slider_content">					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+	<!-- Banner -->
+
+	<div class="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="banner_item align-items-center" style="background-image:url(images/Photo/vest-category.png)">
+						<div class="banner_category">
+							<a href="/menu/vest">vest</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="banner_item align-items-center" style="background-image:url(images/Photo/somi-category.png)">
+						<div class="banner_category">
+							<a href="/menu/somi">sơ mi</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="banner_item align-items-center" style="background-image:url(images/Photo/quantay-category.png)">
+						<div class="banner_category">
+							<a href="/menu/quan">quần tây</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="banner_item align-items-center" style="background-image:url(images/Photo/shoes-category.png)">
+						<div class="banner_category">
+							<a href="/menu/giay">giày</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="banner_item align-items-center" style="background-image:url(images/Photo/phukien-category.png)">
+						<div class="banner_category">
+							<a href="/menu/phukien">phụ kiện</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- New Arrivals -->
+
+	<div class="new_arrivals">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title new_arrivals_title">
+						<h2 style="color:green">Sản Phẩm Mới</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-center">
+				<div class="col text-center">
+					<div class="new_arrivals_sorting">
+						<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*">all</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".somi">Sơ mi</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".giay">Giày</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".quan">Quần</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".phukien">Phụ kiện</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+						<!-- Product 1 -->
+
+						<div class="product-item somi">
+							<div class="product discount product_filter">
+								<div class="product_image">
+									<img src="images/ao3.jpg" alt="">
+								</div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>Mới</span></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Áo Sơ Mi Xanh Đen Chấm Bi</a></h6>
+									<div class="product_price">249.000 VNĐ</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Product 2 -->
+
+						<div class="product-item somi">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="images/ao4.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>Mới</span></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Áo Sơ Mi Xanh Chấm Bi</a></h6>
+									<div class="product_price">249.000 VNĐ</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Product 3 -->
+
+						<div class="product-item somi">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="images/ao.jpg" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Áo Sơ Mi Xanh</a></h6>
+									<div class="product_price">249.000 VNĐ</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Product 4 -->
+
+						<div class="product-item quan">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="images/quan.jpg" alt="">
+								</div>
+								<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>Mới</span></div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Quần Tây Xám</a></h6>
+									<div class="product_price">349.000 VNĐ</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Product 5 -->
+
+						<div class="product-item quan">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="images/product_5.png" alt="">
+								</div>
+								<div class="favorite"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Quần Tây Ghi</a></h6>
+									<div class="product_price">349.000 VNĐ</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Product 9 -->
+
+						<div class="product-item giay">
+							<div class="product product_filter">
+								<div class="product_image">
+									<img src="images/product_5.png" alt="">
+								</div>
+								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
+								<div class="favorite favorite_left"></div>
+								<div class="product_info">
+									<h6 class="product_name"><a href="single.html">Giày</a></h6>
+									<div class="product_price">400.000 VNĐ</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Product 10 -->
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Best Sellers -->
+
+	<div class="best_sellers">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_title new_arrivals_title">
+						<h2 style="color:red">Hàng HOT</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="product_slider_container">
+						<div class="owl-carousel owl-theme product_slider">
+
+							<!-- Slide 1 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item">
+									<div class="product discount">
+										<div class="product_image">
+											<img src="images/product_1.png" alt="">
+										</div>
+										<div class="favorite favorite_left"></div>
+										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
+											<div class="product_price">$520.00<span>$590.00</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 2 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item women">
+									<div class="product">
+										<div class="product_image">
+											<img src="images/product_2.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
+											<div class="product_price">$610.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 3 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item women">
+									<div class="product">
+										<div class="product_image">
+											<img src="images/product_3.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
+											<div class="product_price">$120.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 4 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item accessories">
+									<div class="product">
+										<div class="product_image">
+											<img src="images/product_4.png" alt="">
+										</div>
+										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
+										<div class="favorite favorite_left"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
+											<div class="product_price">$410.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 5 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item women men">
+									<div class="product">
+										<div class="product_image">
+											<img src="images/product_5.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold & Grey</a></h6>
+											<div class="product_price">$180.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 6 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item accessories">
+									<div class="product discount">
+										<div class="product_image">
+											<img src="images/product_6.png" alt="">
+										</div>
+										<div class="favorite favorite_left"></div>
+										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
+											<div class="product_price">$520.00<span>$590.00</span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 7 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item women">
+									<div class="product">
+										<div class="product_image">
+											<img src="images/product_7.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
+											<div class="product_price">$610.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 8 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item accessories">
+									<div class="product">
+										<div class="product_image">
+											<img src="images/product_8.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
+											<div class="product_price">$120.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 9 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item men">
+									<div class="product">
+										<div class="product_image">
+											<img src="images/product_9.png" alt="">
+										</div>
+										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
+										<div class="favorite favorite_left"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">DYMO LabelWriter 450 Turbo Thermal Label Printer</a></h6>
+											<div class="product_price">$410.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Slide 10 -->
+
+							<div class="owl-item product_slider_item">
+								<div class="product-item men">
+									<div class="product">
+										<div class="product_image">
+											<img src="images/product_10.png" alt="">
+										</div>
+										<div class="favorite"></div>
+										<div class="product_info">
+											<h6 class="product_name"><a href="single.html">Pryma Headphones, Rose Gold & Grey</a></h6>
+											<div class="product_price">$180.00</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Slider Navigation -->
+
+						<div class="product_slider_nav_left product_slider_nav d-flex align-items-center justify-content-center flex-column">
+							<i class="fa fa-chevron-left" aria-hidden="true"></i>
+						</div>
+						<div class="product_slider_nav_right product_slider_nav d-flex align-items-center justify-content-center flex-column">
+							<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Benefit -->
+
+	
+<div th:insert="footer :: footer"></div>
+	
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="js/custom.js"></script>
+</body>
+
+</html>
